@@ -1,0 +1,18 @@
+<svg width="400" height="200" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- W Mountain Logo -->
+  <g transform="translate(30, 30)">
+    <!-- Left diagonal -->
+    <line x1="40" y1="20" x2="90" y2="120" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    <!-- First peak (left V) -->
+    <line x1="90" y1="120" x2="140" y2="40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    <!-- Middle peak (center mountain) -->
+    <line x1="140" y1="40" x2="190" y2="120" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    <!-- Second peak (right V) -->
+    <line x1="190" y1="120" x2="240" y2="40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    <!-- Right diagonal -->
+    <line x1="240" y1="40" x2="290" y2="120" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- WANDEROMA Text -->
+  <text x="200" y="175" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="400" letter-spacing="4" fill="currentColor" text-anchor="middle">WANDEROMA</text>
+</svg>
