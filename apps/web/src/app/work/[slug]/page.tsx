@@ -1,21 +1,22 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
-import { getProjectBySlug, getProjects } from "@/lib/projects";
+import { getProjectBySlug } from "@/lib/projects";
 import CaseStudyContent from "@/components/portfolio/CaseStudyContent";
 
-export async function generateStaticParams() {
-  const projects = await getProjects();
-  return projects.map((p: { slug: string }) => ({ slug: p.slug }));
-}
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const project = await getProjectBySlug(params.slug);
-  if (!project) return { title: "Project Not Found" };
-  return {
-    title: `${project.title} — Case Study`,
-    description: project.description,
-  };
+  try {
+    const project = await getProjectBySlug(params.slug);
+    if (!project) return { title: "Project Not Found" };
+    return {
+      title: `${project.title} — Case Study`,
+      description: project.description,
+    };
+  } catch {
+    return { title: "Case Study" };
+  }
 }
 
 export default async function CaseStudyPage({
@@ -31,8 +32,7 @@ export default async function CaseStudyPage({
 
   return (
     <main className="min-h-screen">
-      {/* Header */}
-      <div className="px-6 sm:px-8 pt-24 sm:pt-28">
+      <div className="px-6 sm:px-8 pt-8">
         <div className="max-w-5xl mx-auto">
           <Link
             href="/#work"
@@ -43,7 +43,6 @@ export default async function CaseStudyPage({
           </Link>
         </div>
       </div>
-
       <CaseStudyContent project={project} />
     </main>
   );
