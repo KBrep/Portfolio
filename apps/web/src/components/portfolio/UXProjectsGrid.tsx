@@ -29,6 +29,7 @@ const uxProjects: UXProject[] = [
     title: "Wanderoma — Cultural Storytelling",
     subtitle: "Speculative travel app exploring cultural connection through participatory design and emotionally attuned technology.",
     hasContent: true,
+    previewImage: "/wanderoma-logo.png",
   },
   {
     id: 3,
@@ -36,6 +37,7 @@ const uxProjects: UXProject[] = [
     title: "Knot it Down — Embodied Learning",
     subtitle: "Translating abstract historical timelines into embodied, tactile experiences through speculative UX design.",
     hasContent: true,
+    previewImage: "/knot-it-down-logo.png",
   },
   {
     id: 4,
@@ -43,6 +45,7 @@ const uxProjects: UXProject[] = [
     title: "Deception Tracking in VR",
     subtitle: "Speculative UX exploring how neural technology and biosignal-based AI could surface real-time truthfulness feedback during VR interactions.",
     hasContent: true,
+    previewImage: "/vr-deception-logo.png",
   },
   {
     id: 5,
@@ -50,6 +53,7 @@ const uxProjects: UXProject[] = [
     title: "Multi-User ChatGPT Interface",
     subtitle: "Speculative UX design reimagining ChatGPT as a dynamic multi-user interface with real-time AI facilitation, emotional awareness, and adaptive communication.",
     hasContent: true,
+    previewImage: "/multi-user-chatgpt-logo.png",
   },
   {
     id: 6,

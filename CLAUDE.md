@@ -79,7 +79,7 @@ apps/web/
 - **AboutSection** (`portfolio/AboutSection.tsx`) - Structured "About" content block, 12-col grid
 - **CapabilitiesSection** (`portfolio/CapabilitiesSection.tsx`) - 3-column grid with 5 capabilities + placeholder cell
 - **WorkSection** (`portfolio/WorkSection.tsx`) - 5 work categories with links: UX Projects, Content Writing, Digital Media, Psychology, Development
-- **UXProjectsGrid** (`portfolio/UXProjectsGrid.tsx`) - 6-slot grid with optional logo previews: Slot 1 Reflect Flow (with logo), Slot 2 Wanderoma (with logo), Slot 3 Knot it Down, Slot 4 Deception Tracking in VR, Slot 5 Multi-User ChatGPT Interface, Slot 6 SENSE (with logo)
+- **UXProjectsGrid** (`portfolio/UXProjectsGrid.tsx`) - 6-slot grid with optional logo previews: Slot 1 Reflect Flow (with logo), Slot 2 Wanderoma (with logo), Slot 3 Knot it Down (with logo), Slot 4 Deception Tracking in VR (with logo), Slot 5 Multi-User ChatGPT Interface (with logo), Slot 6 SENSE (with logo)
 - **ContentWritingGrid** (`portfolio/ContentWritingGrid.tsx`) - 2 blog articles showcasing strategic content approach: video marketing and digital trends (2019). Displays content approach methodology
 - **DigitalMediaGrid** (`portfolio/DigitalMediaGrid.tsx`) - 5 social media campaigns with creative process breakdown. Includes professional metrics: managed 13+ accounts, $39K budget, 35% engagement uplift, 18% conversion growth
 - **PsychologyGrid** (`portfolio/PsychologyGrid.tsx`) - 2 articles: Logical Fallacies (5 types) and Science of Persuasion (6 Cialdini principles). Shows application in UX/digital design with behavioral research outcomes
@@ -87,7 +87,7 @@ apps/web/
 - **KnotItDownCaseStudy** - Embodied history education. 4 sub-components in `portfolio/knotitdown/`
 - **ReflectFlowCaseStudy** - Emotional awareness in digital choices. 4 sub-components in `portfolio/reflectflow/`
 - **SenseCaseStudy** - Bio-HCI wearable scanner. 4 sub-components in `portfolio/sense/`
-- **WanderomaCaseStudy** - Cultural storytelling. Includes centered logo preview display (wanderoma-logo.svg). 4 sub-components in `portfolio/wanderoma/`
+- **WanderomaCaseStudy** - Cultural storytelling. 4 sub-components in `portfolio/wanderoma/`
 - **ChatGPTInterfaceCaseStudy** - Multi-user ChatGPT speculative UX. Hero ("What if ChatGPT wasn't just yours?"), problem/design questions, metrics, research (lit review, system mapping, trend analysis), 6-phase process, 5 features (multi-user mode, coloured prompt threads, emotion-aware responses, AI facilitation, multilingual communication), testing (heuristic walkthrough + 2 peer reviews), outcomes, reflection, Figma prototype link only. 4 sub-components in `portfolio/chatgptinterface/`. Forward-thinking, technically curious tone
 - **DeceptionTrackingCaseStudy** - VR biosignal truthfulness speculative UX. Hero ("What if you could see the truth in real time?"), problem (lack of non-verbal cues in VR), 7 metrics (6 biosignal types, 0 formal testing), research (literature synthesis, design fiction), 4-phase process, 4 feedback modalities (honesty meter, halo, sincerity score, opacity), testing (informal critique, no formal usability), outcomes, future directions, reflection. No prototype/artefact link (concept only). 4 sub-components in `portfolio/deceptiontracking/`. Bold, intellectually provocative, ethically aware tone
 - **PhilosophySection** (`portfolio/PhilosophySection.tsx`) - Inverted (dark bg) section with strategic quotes
@@ -122,6 +122,11 @@ apps/web/
 - Monochrome inverted sections (philosophy) for visual contrast
 
 ## Recent Changes
+- 2026-04-21: Added VR Deception logo (vr-deception-logo.png) as UI preview to Deception Tracking in VR case study in UXProjectsGrid. Illustrated scene of two people with VR headsets and dialogue bubbles about deception detection now displays as card preview on /work/ux-projects.
+- 2026-04-21: Added Multi-User ChatGPT Interface logo (multi-user-chatgpt-logo.png) as UI preview to UXProjectsGrid. The GPT logo with colorful arrows representing multi-user collaboration now displays as a card preview on /work/ux-projects.
+- 2026-04-21: Removed Wanderoma logo from inside case study page (WanderomaCaseStudy.tsx). Deleted the Logo Preview section and unused Image import. The logo still appears as grid card preview on /work/ux-projects via UXProjectsGrid.
+- 2026-04-21: Added Wanderoma logo (wanderoma-logo.png) as UI preview to UXProjectsGrid. Logo displays as card preview on /work/ux-projects grid, completing the visual consistency with Reflect Flow, Knot it Down, and SENSE case studies.
+- 2026-04-21: Moved Knot It Down logo from inside case study page to UXProjectsGrid as a previewImage on the UI/UX listing page. Removed logo preview section and unused Image import from KnotItDownCaseStudy. Logo now appears as card preview on /work/ux-projects grid, matching Reflect Flow and SENSE pattern.
 - 2026-04-21: Fixed color uniformity across Content Writing, Digital Media, Psychology, and Development grid components. Replaced all hardcoded `bg-zinc-900/50`, `bg-zinc-800/50`, `border-zinc-800/*`, `text-zinc-400/500` classes with semantic theme tokens (`bg-background`, `border-border`, `bg-muted/20`, `bg-secondary/20`, `text-muted-foreground`, `hover:bg-secondary/30`) to match UX Projects case study card styling. All 4 sections now visually consistent with the 6 case study cards.
 - 2026-04-21: Added Content Writing, Digital Media, Psychology, and Development sections with portfolio content from CV and PORTFOLIO.pdf. Created 4 new work pages with corresponding grid components. Content includes: 2 blog articles, 5 social media campaigns with metrics, 2 psychology articles (logical fallacies, persuasion principles), 4 development projects.
 - 2026-04-16: Repositioned Reflect Flow logo as grid card preview image in UXProjectsGrid (previewImage property) — logo now appears as a separate preview element on the /work/ux-projects grid, not inside the case study page content.
@@ -131,10 +136,6 @@ apps/web/
 - 2026-04-16: Added SENSE logo (sense-logo.png) to public/ and UXProjectsGrid. Grid now supports optional previewImage per project with Image component, hover opacity transition.
 - 2026-04-16: Deception Tracking in VR case study at /work/deception-tracking-vr. Completes all 6 case studies.
 - 2026-04-16: Multi-User ChatGPT Interface case study at /work/multi-user-chatgpt-interface
-- 2026-04-16: Knot it Down case study at /work/knot-it-down
-- 2026-04-16: Reflect Flow case study at /work/reflect-flow-emotional-awareness
-- 2026-04-16: Wanderoma case study at /work/wanderoma-cultural-storytelling
-- 2026-04-16: Updated SENSE case study artifact link; typography fix (justified text, no em dashes)
 
 ---
 

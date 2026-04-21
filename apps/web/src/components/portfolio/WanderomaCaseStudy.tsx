@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import Image from "next/image";
+
 import { Separator } from "@/components/ui/separator";
 import { ArrowUpRight } from "lucide-react";
 import WanderomaMetrics from "./wanderoma/WanderomaMetrics";
@@ -72,24 +72,6 @@ export default function WanderomaCaseStudy() {
                 {tag}
               </span>
             ))}
-          </div>
-        </motion.div>
-
-        {/* ── Logo Preview ── */}
-        <motion.div
-          {...fadeIn}
-          transition={{ duration: 0.8, delay: 0.05 }}
-          className="mt-12 flex justify-center"
-        >
-          <div className="w-48 h-48 sm:w-56 sm:h-56 bg-white/5 border border-border rounded-2xl flex items-center justify-center p-8">
-            <Image
-              src="/wanderoma-logo.svg"
-              alt="Wanderoma Logo"
-              width={200}
-              height={200}
-              className="object-contain opacity-90"
-              priority
-            />
           </div>
         </motion.div>
 
