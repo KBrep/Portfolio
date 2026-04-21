@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Script from "next/script";
+import Navigation from "@/components/portfolio/Navigation";
 import "./globals.css";
 
 const inter = localFont({
@@ -41,6 +42,7 @@ export default function RootLayout({
     <html lang="en" className={inter.variable}>
       <body className={`${inter.className} selection:bg-foreground selection:text-background`}>
         <Script src="/avery-console-capture.js" strategy="afterInteractive" />
+        <Navigation />
         {children}
       </body>
     </html>

@@ -11,7 +11,7 @@ export default function ContentWritingPage() {
   return (
     <main className="min-h-screen">
       {/* Header */}
-      <div className="px-6 sm:px-8 pt-24 pb-16">
+      <div className="px-6 sm:px-8 pt-32 sm:pt-36 pb-16">
         <div className="max-w-7xl mx-auto">
           <Link
             href="/#work"

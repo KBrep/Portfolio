@@ -1,4 +1,3 @@
-import Navigation from "@/components/portfolio/Navigation";
 import HeroSection from "@/components/portfolio/HeroSection";
 import AboutSection from "@/components/portfolio/AboutSection";
 import CapabilitiesSection from "@/components/portfolio/CapabilitiesSection";
@@ -45,8 +44,7 @@ export default function HomePage() {
         },
       ]}
     >
-      <main className="relative">
-        <Navigation />
+      <main className="relative pt-16 sm:pt-20">
         <HeroSection />
         <AboutSection />
         <CapabilitiesSection />

@@ -122,6 +122,8 @@ apps/web/
 - Monochrome inverted sections (philosophy) for visual contrast
 
 ## Recent Changes
+- 2026-04-21: Fixed navigation links to work from all pages. Changed nav hrefs from hash-only anchors (#about, #work, etc.) to full paths with hashes (/#about, /#work, etc.) so clicking navigation items from any page (case studies, work categories) now correctly navigates back to homepage sections.
+- 2026-04-21: Made logo and navigation bar fixed/static across all pages. Moved Navigation component from home page to root layout, added proper top padding (pt-16 sm:pt-20 for home, pt-24 sm:pt-28 for case studies, pt-32 sm:pt-36 for category pages) to all work pages to accommodate fixed header. Navigation now appears on all pages with z-50 layering, maintaining scroll-aware backdrop blur.
 - 2026-04-21: Added VR Deception logo (vr-deception-logo.png) as UI preview to Deception Tracking in VR case study in UXProjectsGrid. Illustrated scene of two people with VR headsets and dialogue bubbles about deception detection now displays as card preview on /work/ux-projects.
 - 2026-04-21: Added Multi-User ChatGPT Interface logo (multi-user-chatgpt-logo.png) as UI preview to UXProjectsGrid. The GPT logo with colorful arrows representing multi-user collaboration now displays as a card preview on /work/ux-projects.
 - 2026-04-21: Removed Wanderoma logo from inside case study page (WanderomaCaseStudy.tsx). Deleted the Logo Preview section and unused Image import. The logo still appears as grid card preview on /work/ux-projects via UXProjectsGrid.
@@ -130,12 +132,6 @@ apps/web/
 - 2026-04-21: Fixed color uniformity across Content Writing, Digital Media, Psychology, and Development grid components. Replaced all hardcoded `bg-zinc-900/50`, `bg-zinc-800/50`, `border-zinc-800/*`, `text-zinc-400/500` classes with semantic theme tokens (`bg-background`, `border-border`, `bg-muted/20`, `bg-secondary/20`, `text-muted-foreground`, `hover:bg-secondary/30`) to match UX Projects case study card styling. All 4 sections now visually consistent with the 6 case study cards.
 - 2026-04-21: Added Content Writing, Digital Media, Psychology, and Development sections with portfolio content from CV and PORTFOLIO.pdf. Created 4 new work pages with corresponding grid components. Content includes: 2 blog articles, 5 social media campaigns with metrics, 2 psychology articles (logical fallacies, persuasion principles), 4 development projects.
 - 2026-04-16: Repositioned Reflect Flow logo as grid card preview image in UXProjectsGrid (previewImage property) — logo now appears as a separate preview element on the /work/ux-projects grid, not inside the case study page content.
-- 2026-04-16: Removed Reflect Flow logo from UI/UX page entirely — deleted standalone UXProjectsLogoPreview component and removed previewImage from Reflect Flow grid card. Logo no longer displays anywhere on /work/ux-projects.
-- 2026-04-16: Added Wanderoma logo (wanderoma-logo.svg) to public/ and WanderomaCaseStudy page. Clean SVG version with "W" mountain mark and wordmark, displayed in centered glassmorphism container matching ReflectFlow pattern.
-- 2026-04-16: Added Reflect Flow logo (reflect-flow-logo.png) to public/ and UXProjectsGrid preview.
-- 2026-04-16: Added SENSE logo (sense-logo.png) to public/ and UXProjectsGrid. Grid now supports optional previewImage per project with Image component, hover opacity transition.
-- 2026-04-16: Deception Tracking in VR case study at /work/deception-tracking-vr. Completes all 6 case studies.
-- 2026-04-16: Multi-User ChatGPT Interface case study at /work/multi-user-chatgpt-interface
 
 ---
 

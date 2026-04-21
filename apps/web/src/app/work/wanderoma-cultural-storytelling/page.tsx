@@ -12,7 +12,7 @@ export default function WanderomaCaseStudyPage() {
   return (
     <main className="min-h-screen">
       {/* Header */}
-      <div className="px-6 sm:px-8 pt-8">
+      <div className="px-6 sm:px-8 pt-24 sm:pt-28">
         <div className="max-w-5xl mx-auto">
           <Link
             href="/work/ux-projects"
